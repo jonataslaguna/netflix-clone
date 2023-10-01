@@ -7,9 +7,9 @@ function MoviesRow () {
    const { moviesList } = useContext(MoviesContext);
 
   return (
-    <section>
+    <section className={ styles.lists }>
       {moviesList.map((item, key: number) => (
-        <div key={key}>
+        <div key={key} >
             <h2>{item.title}</h2>
             <div className={styles.listArea }>
                {item.items.results.length > 0 && item.items.results.map((item, key: number) => (
