@@ -1,6 +1,8 @@
+import MoviesRow from "../../components/MoviesRow";
+
 function Home() {
     return (
-        <h1>Home</h1>
+       <MoviesRow />
     )
 }
 

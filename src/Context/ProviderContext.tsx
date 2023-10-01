@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MoviesContext from "./MoviesContext";
 import { getHomeList } from "../utils/api";
-import { HomeListType, ItensType } from "../types";
+import { HomeListType } from "../types";
 
 
 type MoviesProviderProps = {
@@ -9,13 +9,12 @@ type MoviesProviderProps = {
   };
   
 function MoviesProvider  ({ children }: MoviesProviderProps )  {
-    const [moviesList, setMoviesList] = useState<{ slug: string; title: string; items: ItensType }[] | HomeListType[]>([]);
+    const [moviesList, setMoviesList] = useState<HomeListType[]>([]);
 
     useEffect(() => {
         const getMovies = async () => {
             const listMovies = await getHomeList();
             setMoviesList(listMovies);
-
         }
         getMovies();
     }, []);
