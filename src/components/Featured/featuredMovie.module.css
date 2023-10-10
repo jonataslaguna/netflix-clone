@@ -1,0 +1,16 @@
+.feature {
+  height: 100vh;
+}
+
+.featureVertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featureHorizontal {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 15%, transparent 70%);
+
+}

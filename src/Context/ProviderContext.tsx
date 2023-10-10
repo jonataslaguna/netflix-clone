@@ -26,7 +26,7 @@ function MoviesProvider  ({ children }: MoviesProviderProps )  {
     }, []);
 
     return (
-        <MoviesContext.Provider value={{moviesList, featuredData: featuredData, setFeaturedData: setFeaturedData}}>
+        <MoviesContext.Provider value={{moviesList, featuredData: featuredData, setFeaturedData}}>
             {children}
         </MoviesContext.Provider>
     );
