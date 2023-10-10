@@ -63,3 +63,17 @@ export const getHomeList = async () => {
         },
     ];
 }
+
+ export const getMovieInfo = async (id:number, type:string) => {
+
+    if(id) {
+        switch(type) {
+            case 'movie':
+                return await handleFetch(`/movie/${id}?language=pt-BR&api_key=${KEY}`);
+            case 'tv':
+                return await handleFetch(`/tv/${id}?language=pt-BR&api_key=${KEY}`);
+            default:
+                return null;
+        }
+    }
+}

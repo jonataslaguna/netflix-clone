@@ -1,8 +1,10 @@
 import { createContext } from "react";
-import { HomeListType } from "../types";
+import { HomeListType, ItemInfo } from "../types";
 
 type MoviesContextType = {
-    moviesList: HomeListType[],
+    moviesList: HomeListType[];
+    featuredData: ItemInfo | undefined;
+    setFeaturedData: React.Dispatch<React.SetStateAction<ItemInfo | undefined>>;
 };
  
 const MoviesContext = createContext({} as MoviesContextType);
