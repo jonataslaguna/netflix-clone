@@ -94,7 +94,7 @@ export type ItemInfo = {
     backdrop_path: string;
     created_by: CreatedBy[];
     episode_run_time: number[];
-    first_air_date: string;
+    first_air_date: string | number | Date;
     genres: Genre[];
     homepage: string;
     id: number;
