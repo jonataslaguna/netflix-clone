@@ -21,13 +21,20 @@ function Featured() {
         getGenres();
     }, [featuredData]);
 
+    const truncateOverview = (overview: string | undefined, maxLength: number) => {
+        if (overview && overview.length > maxLength) {
+            return overview.slice(0, maxLength) + '...';
+        }
+        return overview;
+    };
+
     return (
         <section className={ styles.featured } style={{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundImage: `url(https://image.tmdb.org/t/p/original${featuredData?.backdrop_path})`
         }}>
-            <div className={ styles.featureVertical }>
+            <div className={ styles.featuredVertical }>
                 <div className={ styles.featuredHorizontal }>
                     <h1 className={styles.featuredName}>{featuredData?.original_name}</h1>
                     <div className={styles.featuredInfo}>
@@ -36,7 +43,7 @@ function Featured() {
                         <p className={styles.featuredSeasons}>{featuredData?.number_of_seasons} season{featuredData?.number_of_seasons !== 1 ? 's' : ''}</p>
                     </div>
                     <div className={styles.featuredDescription}>
-                        <p>{featuredData?.overview}</p>
+                    <p>{truncateOverview(featuredData?.overview, 100)}</p>
                     </div>
                     <div className={styles.featuredButtons}>
                         <button className={styles.whatchButton}><Link to={`/watch${featuredData?.id}`}>▶ Watch</Link></button>
