@@ -11,6 +11,7 @@ type MoviesProviderProps = {
 function MoviesProvider  ({ children }: MoviesProviderProps )  {
     const [moviesList, setMoviesList] = useState<HomeListType[]>([]);
     const [featuredData, setFeaturedData ] = useState<ItemInfo | undefined >();
+    const [backgroundHeader, setBackgroundHeader] = useState(false);
 
     useEffect(() => {
         const getMovies = async () => {
@@ -26,7 +27,15 @@ function MoviesProvider  ({ children }: MoviesProviderProps )  {
     }, []);
 
     return (
-        <MoviesContext.Provider value={{moviesList, featuredData: featuredData, setFeaturedData}}>
+        <MoviesContext.Provider value={
+            {
+            moviesList,
+            featuredData, 
+            setFeaturedData, 
+            backgroundHeader, 
+            setBackgroundHeader
+            }
+        }>
             {children}
         </MoviesContext.Provider>
     );
