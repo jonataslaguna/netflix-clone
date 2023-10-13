@@ -38,7 +38,7 @@ function Featured() {
                 <div className={ styles.featuredHorizontal }>
                     <h1 className={styles.featuredName}>{featuredData?.original_name}</h1>
                     <div className={styles.featuredInfo}>
-                        <p className={styles.featuredPoints}>{featuredData?.vote_average} points</p>
+                        <p className={styles.featuredPoints}>{featuredData?.vote_average.toFixed(2)} points</p>
                         <p className={styles.featuredYear}>{dateMovie}</p>
                         <p className={styles.featuredSeasons}>{featuredData?.number_of_seasons} season{featuredData?.number_of_seasons !== 1 ? 's' : ''}</p>
                     </div>
