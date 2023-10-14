@@ -13,6 +13,7 @@
 
 .movieRowList {
   display: flex;
+  transition: all ease 0.5s;
 }
 
 .movieRowItem {
@@ -36,4 +37,37 @@
 
 .lists {
   margin-top: -150px;
+}
+
+.movieRowLeft, 
+.movieRowRight {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  display: flex;
+  height: 225px;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease 0.5s;
+  width: 40px;
+  z-index: 1;
+}
+
+.movieRowLeft {
+  left: 0;
+}
+
+.movieRowRight {
+  right: 0;
+}
+
+.movieRowLeft img, .movieRowRight img {
+  width: 50px;
+}
+
+.movieRow:hover .movieRowLeft, 
+.movieRow:hover .movieRowRight {
+  opacity: 1;
 }

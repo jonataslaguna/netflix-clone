@@ -8,11 +8,11 @@ function Home() {
     const { featuredData } = useContext(MoviesContext);
 
     return (
-        <div>
+        <section>
           <Header />
           {featuredData && <Featured /> }
           <MoviesRow />
-        </div>
+        </section>
     )
 }
 
