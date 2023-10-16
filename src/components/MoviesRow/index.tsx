@@ -22,19 +22,21 @@ function MoviesRow () {
       setScrollRowMovies(newScrollRowMovies);
    };
 
-   const handleClickRightArrow = (index:number) => {
+   const handleClickRightArrow = (index: number) => {
     const newScrollRowMovies = [...scrollRowMovies];
     const windowWidth = window.innerWidth;
     const movieListLength = moviesList[index].items.results.length;
-    const rowListWidth = movieListLength * 150; 
-    const maxScrollValue = Math.max(rowListWidth - windowWidth, 0);
-    const scrollAmount = windowWidth * 0.3; 
-  
-    if (newScrollRowMovies[index] > -maxScrollValue ) {
-      newScrollRowMovies[index] -= scrollAmount;
+    const rowListWidth = movieListLength * 150;
+    const maxVisibleWidth = windowWidth - 80;
+    const maxScrollValue = Math.max(rowListWidth - maxVisibleWidth, 0);
+    const scrollAmount = windowWidth * 0.3;
+
+    if (newScrollRowMovies[index] > -maxScrollValue) {
+        newScrollRowMovies[index] = Math.max(newScrollRowMovies[index] - scrollAmount, -maxScrollValue);
     }
     setScrollRowMovies(newScrollRowMovies);
-  };
+};
+
   
 
   return (
@@ -51,7 +53,6 @@ function MoviesRow () {
             <div className={styles.movieRowlistArea }>
                 <div className={ styles.movieRowList} style={{
                   marginLeft: scrollRowMovies[index],
-                  
                 }}>
                     {item.items.results.length > 0 && item.items.results.map((item, key: number) => (
                         <div key={key} className={ styles.movieRowItem }>
