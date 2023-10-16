@@ -28,7 +28,7 @@ export const getHomeList = async () => {
 
         {
             slug: 'topRated',
-            title: 'On the Rise',
+            title: 'Most watched',
             items: await handleFetch(`/movie/top_rated?api_key=${KEY}`)
         },
 
