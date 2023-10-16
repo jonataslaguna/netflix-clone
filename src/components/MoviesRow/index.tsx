@@ -1,5 +1,5 @@
 import MoviesContext from "../../Context/MoviesContext";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import rightIcon from '/svg/right.svg';
 import leftIcon from '/svg/left.svg';
@@ -7,8 +7,13 @@ import styles from './moviesRow.module.css';
 
 function MoviesRow () {
    const { moviesList } = useContext(MoviesContext);
-   const [scrollRowMovies, setScrollRowMovies] = useState<Array<number>>(moviesList.map(() => 0));
+   const [scrollRowMovies, setScrollRowMovies] = useState<Array<number>>([]);
 
+   useEffect(() => {
+    setScrollRowMovies(moviesList.map(() => 0));
+  }, [moviesList]);
+  
+   
     const handleClickLeftArrow = (index:number) => {
       const newScrollRowMovies = [...scrollRowMovies];
       const windowWidth = window.innerWidth;
@@ -25,10 +30,11 @@ function MoviesRow () {
     const maxScrollValue = rowListWidth - windowWidth;
     const scrollAmount = windowWidth * 0.3; 
   
-    if (newScrollRowMovies[index] > -maxScrollValue) {
+    if (newScrollRowMovies[index] > -maxScrollValue ) {
       newScrollRowMovies[index] -= scrollAmount;
     }
     setScrollRowMovies(newScrollRowMovies);
+    console.log(scrollRowMovies)
   };
   
 
