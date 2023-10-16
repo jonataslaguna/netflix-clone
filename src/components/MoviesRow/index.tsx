@@ -27,14 +27,13 @@ function MoviesRow () {
     const windowWidth = window.innerWidth;
     const movieListLength = moviesList[index].items.results.length;
     const rowListWidth = movieListLength * 150; 
-    const maxScrollValue = rowListWidth - windowWidth;
+    const maxScrollValue = Math.max(rowListWidth - windowWidth, 0);
     const scrollAmount = windowWidth * 0.3; 
   
     if (newScrollRowMovies[index] > -maxScrollValue ) {
       newScrollRowMovies[index] -= scrollAmount;
     }
     setScrollRowMovies(newScrollRowMovies);
-    console.log(scrollRowMovies)
   };
   
 
