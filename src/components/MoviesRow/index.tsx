@@ -1,5 +1,5 @@
-import MoviesContext from "../../Context/MoviesContext";
-import { useContext, useEffect, useState } from "react";
+import MoviesContext from '../../Context/MoviesContext';
+import { useContext, useEffect, useState } from 'react';
 
 import rightIcon from '/svg/right.svg';
 import leftIcon from '/svg/left.svg';

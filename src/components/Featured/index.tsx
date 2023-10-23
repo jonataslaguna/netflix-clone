@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
-import MoviesContext from "../../Context/MoviesContext";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from 'react';
+import MoviesContext from '../../Context/MoviesContext';
+import { Link } from 'react-router-dom';
 
 import styles from './featuredMovie.module.css'; 
 
@@ -46,8 +46,8 @@ function Featured() {
                     <p>{truncateOverview(featuredData?.overview, 100)}</p>
                     </div>
                     <div className={styles.featuredButtons}>
-                        <button className={styles.whatchButton}><Link to={`/watch${featuredData?.id}`}>▶ Watch</Link></button>
-                        <button className={styles.myListButton}><Link to={`/list/add/${featuredData?.id}`}>+ My List</Link></button>
+                        <button className={styles.whatchButton}><Link to={`#`}>▶ Watch</Link></button>
+                        <button className={styles.myListButton}><Link to={`#`}>+ My List</Link></button>
                     </div>
                     <div>
                         <p className={styles.featureGenres}><strong>Genres: </strong>{genres}</p>

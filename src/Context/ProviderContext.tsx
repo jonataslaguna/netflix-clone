@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import MoviesContext from "./MoviesContext";
-import { getHomeList, getMovieInfo } from "../utils/api";
-import { HomeListType, ItemInfo } from "../types";
+import { useEffect, useState } from 'react';
+import MoviesContext from './MoviesContext';
+import { getHomeList, getMovieInfo } from '../utils/api';
+import { HomeListType, ItemInfo } from '../types';
 
 
 type MoviesProviderProps = {
