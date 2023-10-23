@@ -69,9 +69,9 @@ export const getHomeList = async () => {
     if(id) {
         switch(type) {
             case 'movie':
-                return await handleFetch(`/movie/${id}?&api_key=${KEY}`);
+                return await handleFetch(`/movie/${id}?language=pt-BR&api_key=${KEY}`);
             case 'tv':
-                return await handleFetch(`/tv/${id}?&api_key=${KEY}`);
+                return await handleFetch(`/tv/${id}?language=pt-BR&api_key=${KEY}`);
             default:
                 return null;
         }
