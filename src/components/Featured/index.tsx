@@ -46,8 +46,8 @@ function Featured() {
                     <p>{truncateOverview(featuredData?.overview, 100)}</p>
                     </div>
                     <div className={styles.featuredButtons}>
-                        <button className={styles.whatchButton}><Link to={`#`}>▶ Watch</Link></button>
-                        <button className={styles.myListButton}><Link to={`#`}>+ My List</Link></button>
+                        <button className={styles.whatchButton}><Link to={`/watch${featuredData?.id}`}>▶ Watch</Link></button>
+                        <button className={styles.myListButton}><Link to={`/list/add/${featuredData?.id}`}>+ My List</Link></button>
                     </div>
                     <div>
                         <p className={styles.featureGenres}><strong>Genres: </strong>{genres}</p>
