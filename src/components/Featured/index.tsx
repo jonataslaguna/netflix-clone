@@ -8,6 +8,7 @@ function Featured() {
     const { featuredData } = useContext(MoviesContext);
     const [dateMovie, setDateMovie] = useState<number>();
     const [genres, setGenres] = useState<string | undefined>('');
+    const [titleSize, setTitleSize] = useState(false);
 
     useEffect(() => {
         if (featuredData) {
@@ -20,6 +21,15 @@ function Featured() {
         }
         getGenres();
     }, [featuredData]);
+
+    useEffect(() => {
+        const handleTitleSize = () => {
+            if (featuredData && featuredData?.original_name.length > 25) {
+                setTitleSize(true);
+            }
+        }
+        handleTitleSize()
+    },[featuredData])
 
     const truncateOverview = (overview: string | undefined, maxLength: number) => {
         if (overview && overview.length > maxLength) {
@@ -36,7 +46,7 @@ function Featured() {
         }}>
             <div className={ styles.featuredVertical }>
                 <div className={ styles.featuredHorizontal }>
-                    <h1 className={styles.featuredName}>{featuredData?.original_name}</h1>
+                    <h1 className={`${titleSize ? styles.featuredNameSmallFont : styles.featuredName}`}>{featuredData?.original_name}</h1>
                     <div className={styles.featuredInfo}>
                         <p className={styles.featuredPoints}>{featuredData?.vote_average.toFixed(2)} points</p>
                         <p className={styles.featuredYear}>{dateMovie}</p>

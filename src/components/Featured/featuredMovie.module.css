@@ -26,6 +26,10 @@
   font-weight: bold;
 }
 
+.featuredNameSmallFont {
+  font-size: 35px;
+}
+
 .featuredInfo {
   display: flex;
   font-size: 18px;
