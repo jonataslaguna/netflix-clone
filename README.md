@@ -33,7 +33,7 @@ Este projeto está em andamento e aberto para contribuições. Se você deseja c
 
 1. Faça um fork do projeto
 2. Crie uma nova branch (`git checkout -b feature/sua-feature`)
-3. Faça commit das alterações (`git commit -am 'Adicione sua feature'`)
+3. Faça commit das alterações (`git commit -m 'Adicione sua feature'`)
 4. Faça push para a branch (`git push origin feature/sua-feature`)
 5. Abra um Pull Request
 
