@@ -47,7 +47,7 @@
   padding-top: 15px;
   font-size: 18px;
   color: #999;
-  max-width: 40%;
+  max-width: 35%;
 }
 
 .featuredButtons {
@@ -89,8 +89,45 @@
   color: white;
 }
 
-.featureGenres {
+.featuredGenres {
   padding-top: 15px;
   font-size: 18px;
   color: #999;
+}
+
+@media screen and (max-width: 760px) {
+  .featuredName, .featuredNameSmallFont {
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .featuredName {
+    font-size: 40px;
+  }
+
+  .featuredNameSmallFont {
+    font-size: 25px;
+  }
+
+  .featuredDescription {
+    color: #cccccc;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    max-width: 90%;
+  }
+
+  .featuredInfo {
+    font-size: 16px;
+  }
+
+  .featuredButtons {
+    gap: 10px;
+  }
+
+  .featuredButtons a {
+    font-size: 16px;
+  }
+
+.featuredGenres {
+    font-size: 15px;
+  }
 }

@@ -60,7 +60,7 @@ function Featured() {
                         <button className={styles.myListButton}><Link to={`#`}>+ My List</Link></button>
                     </div>
                     <div>
-                        <p className={styles.featureGenres}><strong>Genres: </strong>{genres}</p>
+                        <p className={styles.featuredGenres}><strong>Genres: </strong>{genres}</p>
                     </div>
                 </div>
             </div>
