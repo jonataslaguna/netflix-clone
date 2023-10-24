@@ -90,9 +90,10 @@
 }
 
 .featuredGenres {
-  padding-top: 15px;
-  font-size: 18px;
   color: #999;
+  padding-top: 15px;
+  font-size: 15px;
+  width: 450px;
 }
 
 @media screen and (max-width: 760px) {
