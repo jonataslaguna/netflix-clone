@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import MoviesContext from '../../Context/MoviesContext';
 import { Link } from 'react-router-dom';
+import playIcon from '/svg/play.svg';
 
 import styles from './featuredMovie.module.css'; 
 
@@ -56,7 +57,7 @@ function Featured() {
                     <p>{truncateOverview(featuredData?.overview, 100)}</p>
                     </div>
                     <div className={styles.featuredButtons}>
-                        <button className={styles.whatchButton}><Link to={`#`}>▶ Watch</Link></button>
+                        <button className={styles.whatchButton}><Link to={`#`}><img src={playIcon} alt="" /> Watch</Link></button>
                         <button className={styles.myListButton}><Link to={`#`}>+ My List</Link></button>
                     </div>
                     <div>

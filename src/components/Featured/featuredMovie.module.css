@@ -77,6 +77,10 @@
   transition: all ease 0.2s;
 }
 
+.whatchButton img {
+  width: 15px;
+}
+
 .whatchButton:hover, .myListButton:hover {
   opacity: 0.8;
 }
