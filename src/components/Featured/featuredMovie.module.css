@@ -9,7 +9,7 @@
 }
 
 .featuredHorizontal {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.897) 35%, transparent 70%); 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.801) 35%, transparent 70%); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,6 +30,10 @@
   font-size: 35px;
 }
 
+.featuredName, .featuredNameSmallFont {
+  text-shadow: 1px 1px 1px black;
+}
+
 .featuredInfo {
   display: flex;
   font-size: 18px;
@@ -48,6 +52,7 @@
   font-size: 18px;
   color: #999;
   max-width: 35%;
+  text-shadow: 1px 1px 1px black;
 }
 
 .featuredButtons {
@@ -97,8 +102,8 @@
 }
 
 @media screen and (max-width: 760px) {
-  .featuredName, .featuredNameSmallFont {
-    text-shadow: 1px 1px 1px black;
+  .featuredHorizontal {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.616) 100%, transparent 100%);
   }
 
   .featuredName {
@@ -112,7 +117,6 @@
   .featuredDescription {
     color: #cccccc;
     font-size: 15px;
-    text-shadow: 1px 1px 1px black;
     max-width: 90%;
   }
 
@@ -129,7 +133,7 @@
   }
 
 .featuredGenres {
-    font-size: 15px;
-    max-width: 90%;
+    font-size: 14px;
+    max-width: 80%;
   }
 }
