@@ -6,7 +6,7 @@ Este é um projeto em andamento que tem como objetivo criar um clone da Netflix 
 
 - Página inicial que exibe uma coleção de filmes e séries
 - Integração com a API do IMDB para obter informações sobre filmes e séries
-- [Incluir outras funcionalidades à medida que forem implementadas]
+- [Serão incluídas outras funcionalidades à medida que forem implementadas]
 
 ## Como utilizar
 
