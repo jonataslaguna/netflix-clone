@@ -18,7 +18,7 @@ function MoviesProvider  ({ children }: MoviesProviderProps )  {
             const listMovies = await getHomeList();
             setMoviesList(listMovies);
             const originals = listMovies.filter((item) => item.slug === 'originals');
-            const randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1)); 
+            const randomChosen = Math.floor(1 + Math.random() * (originals[0].items.results.length -1)); 
             const item = originals[0].items.results[randomChosen];
             const itemInfo = await getMovieInfo(item.id, 'tv');
             setFeaturedData(itemInfo); 
