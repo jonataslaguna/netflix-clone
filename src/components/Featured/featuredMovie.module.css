@@ -112,16 +112,18 @@
 
   .featuredName {
     font-size: 40px;
+    max-width: 90%;
   }
 
   .featuredNameSmallFont {
     font-size: 25px;
+    max-width: 90%;
   }
 
   .featuredDescription {
     color: #cccccc;
     font-size: 15px;
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .featuredInfo {
