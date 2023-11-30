@@ -41,5 +41,3 @@ Este projeto está em andamento e aberto para contribuições. Se você deseja c
 
 Se você deseja entrar em contato comigo, sinta-se à vontade para enviar um e-mail para [jonataslaguna.js@email.com](mailto:jonataslaguna.js@email.com).
 
----
-**Observação**: Este projeto está em desenvolvimento e sujeito a alterações frequentes.
