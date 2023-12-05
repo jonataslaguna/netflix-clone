@@ -1,4 +1,4 @@
-# Netflix Clone
+# NETFLIX Clone
 
 Este é um projeto em andamento que tem como objetivo criar um clone visual da Netflix utilizando React e TypeScript. O projeto busca replicar algumas funcionalidades e o design da Netflix, fazendo uso da API do IMDB para obter os filmes e séries.
 
