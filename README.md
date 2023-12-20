@@ -39,5 +39,4 @@ Este projeto está em andamento e aberto para contribuições. Se você deseja c
 
 ## Contato
 
-Se você deseja entrar em contato comigo, sinta-se à vontade para enviar um e-mail para [jonataslaguna.js@email.com](mailto:jonataslaguna.js@email.com).
-
+Se você deseja entrar em contato comigo, sinta-se à vontade para enviar um e-mail para [jonataslaguna.js@gmail.com](mailto:jonataslaguna.js@gmail.com).
