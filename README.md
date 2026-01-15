@@ -10,7 +10,7 @@ Este é um projeto em andamento que tem como objetivo criar um clone visual da N
 
 ## Como utilizar
 
-Se não quiser fazer a instalação, utilize o app através desse <a href="https://netflix-ts-react.vercel.app">link</a>, caso contrário basta seguir os passos abaixo para a [instalação](#instalação)
+Se não quiser fazer a instalação, utilize o app através desse <a href="https://netflix-clone-flax-ten-98.vercel.app">link</a>, caso contrário basta seguir os passos abaixo para a [instalação](#instalação)
 
 ## Instalação
 
